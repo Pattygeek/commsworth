@@ -35,16 +35,24 @@ const Services = () => {
 		<>
 			<Box w="100%" bg="white" py="8">
 				<Box w="80%" mx="auto">
-					<Flex>
+					<Flex my="8">
 						<Text
 							color="brand.100"
 							fontWeight="bold"
-							w="20%"
+							w="28%"
 							textTransform="uppercase"
+							letterSpacing="0.15em"
+							fontSize="xl"
 						>
 							Our Services
 						</Text>
-						<Text w="80%">
+						<Text
+							w="72%"
+							fontSize="xl"
+							fontWeight={600}
+							lineHeight="36px"
+							color="#575757"
+						>
 							Our team seek to help your organization navigate this threshold
 							that stands between your brands and distinctive innovations, and
 							finding your brands inner sanctum.
@@ -52,28 +60,84 @@ const Services = () => {
 					</Flex>
 					<Grid templateColumns="repeat(2, 1fr)" gap={6}>
 						{services.map((service) => (
-							<Box borderRadius="5px" key={service.id} width="540px">
-								<Image src={`/images/${service.image}`} h="335px" />
+							<Box
+								borderRadius="5px"
+								overflow="hidden"
+								key={service.id}
+								width="540px"
+							>
+								<Box
+									overflow="hidden"
+									cursor="pointer"
+									zIndex={-1}
+									h="335px"
+									mb="-10px"
+								>
+									<Image
+										src={`/images/${service.image}`}
+										width="100%"
+										className="img-fluid"
+									/>
+								</Box>
+
 								<Box
 									bg="brand.100"
-									p="6"
+									p="8"
 									borderBottomLeftRadius="5px"
 									borderBottomRightRadius="5px"
 									h="307px"
+									zIndex={+5}
+									display="flex"
+									flexDir="column"
 								>
-									<Text fontWeight="bold" fontSize="2xl" color="white">
+									<Text
+										fontWeight="bold"
+										fontSize="2xl"
+										color="white"
+										letterSpacing="0.02em"
+									>
 										{service.title}
 									</Text>
-									<Text color="white">{service.text}</Text>
 									<Text
-										fontWeight="semibold"
-										color="brand.200"
-										fontWeight="bold"
-										textTransform="uppercase"
-										textAlign="right"
+										color="white"
+										mt="4"
+										color="grey.500"
+										fontSize="lg"
+										fontWeight="medium"
+										lineHeight="27px"
 									>
-										Work with us
+										{service.text}
 									</Text>
+									<Flex justifyContent="flex-end" mt="auto">
+										<Text
+											fontWeight="semibold"
+											color="brand.200"
+											fontWeight="bold"
+											textTransform="uppercase"
+											textAlign="right"
+											fontSize="2xl"
+											letterSpacing="0.15em"
+											mt="auto"
+											position="relative"
+											_after={{
+												content: '""',
+												position: "absolute",
+												height: "2px",
+												width: "220px",
+												backgroundColor: "#4CB952",
+												left: 0,
+												bottom: "-3%",
+											}}
+										>
+											Work with us
+										</Text>
+										<Image
+											src="/Arrow.svg"
+											ml="4"
+											transition="all 0.4s cubic-bezier(0, 0.04, 0.04, 0.18);"
+											_hover={{ marginLeft: "0" }}
+										/>
+									</Flex>
 								</Box>
 							</Box>
 						))}

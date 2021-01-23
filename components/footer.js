@@ -5,13 +5,14 @@ const Footer = () => {
 		<>
 			<Box bg="brand.100" width="100%">
 				<Box width="80%" mx="auto" color="white" mt="12" mb="20">
-					<Flex justifyContent="space-between" flexDir={["column","row"]}>
+					<Flex justifyContent="space-between" flexDir={["column", "row"]}>
 						<Box lineHeight="35px">
 							<Text
 								textTransform="uppercase"
 								fontWeight="bold"
 								fontSize="xl"
 								pb="3"
+								letterSpacing="0.02em"
 							>
 								Customer Service
 							</Text>
@@ -24,6 +25,7 @@ const Footer = () => {
 								fontWeight="bold"
 								fontSize="xl"
 								pb="3"
+								letterSpacing="0.02em"
 							>
 								Business
 							</Text>
@@ -37,6 +39,7 @@ const Footer = () => {
 								fontWeight="bold"
 								fontSize="xl"
 								pb="3"
+								letterSpacing="0.02em"
 							>
 								Company
 							</Text>
@@ -46,7 +49,7 @@ const Footer = () => {
 							<Text>Customers stories</Text>
 							<Text>Contact us</Text>
 						</Box>
-						<Box textAlign={["left","right"]} lineHeight="30px">
+						<Box textAlign={["left", "right"]} lineHeight="30px">
 							<Text textTransform="uppercase">Lagos Nigeria</Text>
 							<Text>30, Shakiru Anjorin Street, Road 39, Off</Text>
 							<Text>Admiralty Way,Lekki Phase 1, Lekki, Lagos,</Text>

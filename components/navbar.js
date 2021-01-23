@@ -3,15 +3,16 @@ import { Box, Text, Image, Button, Flex } from "@chakra-ui/react";
 const Navbar = () => {
 	return (
 		<>
-			<Box bg="transparent" py="8" w="100%">
+			<Box
+				bg="transparent"
+				py="8"
+				w="100%"
+				position="fixed"
+				// style={{ backdropFilter: "blur(5px)" }}
+			>
 				<Box w="85%" mx="auto" display="flex">
 					<Image src="/images/logo.png" />
-					<Flex
-						ml="auto"
-						color="white"
-						w="50%"
-						justifyContent="space-between"
-					>
+					<Flex ml="auto" color="white" w="50%" justifyContent="space-between">
 						<Text fontWeight={600} fontSize="lg">
 							Services
 						</Text>
@@ -37,8 +38,11 @@ const Navbar = () => {
 						textTransform="uppercase"
 						color="white"
 						fontWeight="bold"
-                        ml="auto"
-                        my="auto"
+						ml="auto"
+						my="auto"
+						alignSelf="center"
+						letterSpacing="0.15em"
+						px="6"
 					>
 						COntact us
 					</Button>
