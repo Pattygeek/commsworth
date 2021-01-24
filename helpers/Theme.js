@@ -14,6 +14,7 @@ export const CustomTheme = extendTheme({
     ...theme,
     fontFamily: {
       poppins: "Poppins, sans-serif",
+      
     }, 
     colors: {
       ...theme.colors,

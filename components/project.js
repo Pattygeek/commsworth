@@ -1,4 +1,4 @@
-import { Box, Text, Button, Flex, Grid } from "@chakra-ui/react";
+import { Box, Text, Button, Image, Grid } from "@chakra-ui/react";
 
 const Project = () => {
 	const projects = [
@@ -41,6 +41,17 @@ const Project = () => {
 					letterSpacing="0.15em"
 					fontSize="xl"
 					textTransform="uppercase"
+					position="relative"
+					_before={{
+						content: '""',
+						position: "absolute",
+						height: "4px",
+						width: "39px",
+						backgroundColor: "brand.100",
+						left: "39%",
+						top: "3",
+						// bottom: "-3%",
+					}}
 				>
 					Our projects
 				</Text>
@@ -49,9 +60,7 @@ const Project = () => {
 					gap={4}
 					// gridTemplateRows="minmax(150px, 1fr)"
 					gridTemplateColumns="repeat(4, 1fr)"
-					overflowX="scroll"
-					marginRight="16px"
-					marginLeft="16px"
+					// overflowX="scroll"
 					className="logobar"
 				>
 					{projects.map((project) => (
@@ -61,13 +70,18 @@ const Project = () => {
 							height="816px"
 							width="527px"
 							className="project"
-							
+							overflow="hidden"
 							bgImage={`linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/${project.image}.png)`}
 						>
-							<Text color="white"className='title' fontSize="5xl" fontWeight="bold">
+							<Text
+								color="white"
+								className="title"
+								fontSize="5xl"
+								fontWeight="bold"
+							>
 								{project.title}
 							</Text>
-							<Text color="white"  className="title" fontSize="2xl">
+							<Text color="white" className="title" fontSize="2xl">
 								{project.body}
 							</Text>
 						</Box>
@@ -82,8 +96,18 @@ const Project = () => {
 					fontSize="xl"
 					letterSpacing="0.15em"
 					px="8"
+					_hover={{
+						bg: "brand.200",
+						opacity: 0.9,
+					}}
 				>
 					View all projects
+					<Image
+						src="/whiteArr.svg"
+						ml={2}
+						transition="all 0.4s cubic-bezier(0, 0.04, 0.04, 0.18);"
+						_hover={{ transform: "translate(10px)" }}
+					/>
 				</Button>
 			</Box>
 		</>

@@ -29,16 +29,33 @@ const Blog = () => {
 					color="brand.100"
 					letterSpacing="0.15em"
 					fontWeight="bold"
-					fontSizxe="xl"
+					fontSize="xl"
 					textTransform="uppercase"
 					pb="8"
+					position="relative"
+					_before={{
+						content: '""',
+						position: "absolute",
+						height: "4px",
+						width: "39px",
+						backgroundColor: "brand.100",
+						left: "41%",
+						top: "3",
+						// bottom: "-3%",
+					}}
 				>
 					Blog
 				</Text>
 				{data.map((dat) => (
-					<Flex width="100%" height="411px" key={dat.id} mb="10">
-						<Image src={`/images/${dat.image}.png`} w="50%" />
-						<Box w="50%" px="4" bg="grey.100" py="4" px="10">
+					<Flex
+						width="100%"
+						height={["auto", "411px"]}
+						key={dat.id}
+						mb="10"
+						flexDir={["column, row"]}
+					>
+						<Image src={`/images/${dat.image}.png`} w={["100%", "50%"]} />
+						<Box w={["100%", "50%"]} px="4" bg="grey.100" py="4" px="10">
 							<Text color="grey.200" fontWeight="bold" fontSize="sm">
 								{dat.date}
 							</Text>

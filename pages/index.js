@@ -14,7 +14,7 @@ function Home() {
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>Commsworth</title>
+				<title>TruContact</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header />

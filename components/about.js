@@ -9,15 +9,29 @@ const About = () => {
 						<Text
 							color="brand.100"
 							fontWeight="bold"
-							w="28%"
+							w="25%"
+							textAlign="right"
 							textTransform="uppercase"
 							letterSpacing="0.15em"
 							fontSize="xl"
+							marginRight={8}
+							position="relative"
+							mt="1"
+							_before={{
+								content: '""',
+								position: "absolute",
+								height: "4px",
+								width: "39px",
+								backgroundColor: "brand.100",
+								left: 20,
+								top: "13%",
+								// bottom: "-3%",
+							}}
 						>
 							About us
 						</Text>
 						<Text
-							w="72%"
+							w="75%"
 							fontSize="xl"
 							fontWeight={600}
 							lineHeight="36px"
@@ -111,7 +125,7 @@ const About = () => {
 									src="/Arrow.svg"
 									ml="4"
 									transition="all 0.4s cubic-bezier(0, 0.04, 0.04, 0.18);"
-									_hover={{ marginLeft: "1" }}
+									_hover={{ transform: "translate(10px)" }}
 								/>
 							</Flex>
 						</Box>

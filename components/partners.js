@@ -1,4 +1,5 @@
 import { Box, Text, Flex, Image, Grid } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
 
 const Partners = () => {
 	const logos = [
@@ -29,23 +30,52 @@ const Partners = () => {
 		"dangote",
 		"fcmb",
 	];
+
+	// const [mousePosition, setMousePosition] = useState(null);
+
+	// const updateMousePosition = (ev) => {
+	// 	setMousePosition(ev.clientX);
+	// };
+
+	// useEffect(() => {
+	// 	window.addEventListener("mousemove", updateMousePosition);
+
+	// 	return () => window.removeEventListener("mousemove", updateMousePosition);
+	// }, []);
+
+	// console.log(mousePosition)
+
 	return (
 		<>
 			<Box w="100%" bg="grey.100" py="8">
-				<Box w="80%" mx="auto">
+				<Box w="80%" mx="auto" overflow="hidden">
 					<Flex pb="12">
 						<Text
 							color="brand.100"
 							fontWeight="bold"
-							w="28%"
+							w="25%"
 							textTransform="uppercase"
 							fontSize="xl"
 							letterSpacing="0.15em"
+							position="relative"
+							textAlign="right"
+							mr={12}
+							mt="1"
+							_before={{
+								content: '""',
+								position: "absolute",
+								height: "4px",
+								width: "39px",
+								backgroundColor: "brand.100",
+								left: 2,
+								top: "3",
+								// bottom: "-3%",
+							}}
 						>
 							Our Partners
 						</Text>
 						<Text
-							w="72%"
+							w="75%"
 							fontSize="xl"
 							fontWeight={600}
 							lineHeight="36px"
@@ -61,9 +91,9 @@ const Partners = () => {
 						mb="6"
 						templateColumns="repeat(12, 1fr)"
 						gap={7}
-						overflowX="scroll"
+						// overflowX="scroll"
 					>
-						{logos.map((logo) => (
+						{logos.map((logo, index) => (
 							<Box
 								w="244px"
 								h="126px"
@@ -79,7 +109,7 @@ const Partners = () => {
 						className="logobar"
 						templateColumns="repeat(12, 1fr)"
 						gap={7}
-						overflowX="scroll"
+						// overflowX="scroll"
 					>
 						{logoTwos.map((logo) => (
 							<Box
@@ -120,7 +150,7 @@ const Partners = () => {
 									fontWeight="bold"
 									fontSize="xl"
 									letterSpacing="0.15em"
-									position='relative'
+									position="relative"
 									_after={{
 										content: '""',
 										position: "absolute",
@@ -135,9 +165,9 @@ const Partners = () => {
 								</Text>
 								<Image
 									src="/Arrow.svg"
-									ml="4"
+									ml="2"
 									transition="all 0.4s cubic-bezier(0, 0.04, 0.04, 0.18);"
-									_hover={{ marginLeft: "0" }}
+									_hover={{ transform: "translate(10px)" }}
 								/>
 							</Flex>
 						</Box>

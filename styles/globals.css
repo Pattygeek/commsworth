@@ -2,8 +2,9 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {
@@ -19,7 +20,15 @@ a {
     "&::-webkit-scrollbar": {
       width: "0",
       height: "0",
-    }, */
+	}, */
+.logobar {
+	position: relative;
+}
+
+ .logobar:hover {
+	transform: translateX(-50%);
+	transition: 1s;
+} 
 .logobar::-webkit-scrollbar {
 	/* WebKit */
 	width: 0;
@@ -33,13 +42,13 @@ a {
 	transform: scale(1);
 }
 
-.project {
+/* .project {
 	overflow: hidden !important;
 	transition: all 0.4s cubic-bezier(0, 0.04, 0.04, 0.18);
 }
 .project:hover {
 	transform: scale(1.2);
-}
+} */
 
 .img-fluid:hover {
 	transform: scale(1.2);

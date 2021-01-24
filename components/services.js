@@ -39,15 +39,29 @@ const Services = () => {
 						<Text
 							color="brand.100"
 							fontWeight="bold"
-							w="28%"
+							w="25%"
 							textTransform="uppercase"
 							letterSpacing="0.15em"
 							fontSize="xl"
+							position="relative"
+							textAlign="right"
+							mt="1"
+							mr={12}
+							_before={{
+								content: '""',
+								position: "absolute",
+								height: "4px",
+								width: "39px",
+								backgroundColor: "brand.100",
+								left: 3,
+								top: "20%",
+								// bottom: "-3%",
+							}}
 						>
 							Our Services
 						</Text>
 						<Text
-							w="72%"
+							w="75%"
 							fontSize="xl"
 							fontWeight={600}
 							lineHeight="36px"
@@ -133,9 +147,9 @@ const Services = () => {
 										</Text>
 										<Image
 											src="/Arrow.svg"
-											ml="4"
+											ml="2"
 											transition="all 0.4s cubic-bezier(0, 0.04, 0.04, 0.18);"
-											_hover={{ marginLeft: "0" }}
+											_hover={{ transform: "translate(10px)" }}
 										/>
 									</Flex>
 								</Box>
